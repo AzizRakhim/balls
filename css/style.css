@@ -1,4 +1,116 @@
 body{
-    background-color: #fff;
+    background-color: #2F4257;
     min-height: 100vh;
+}
+
+.content{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.line{
+    width: 500px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00ecff;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.balls{
+    width: 500px;
+    height: 480px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.ball{
+    width: 100px;
+    height: 480px;
+    position: relative;
+    transform-origin: top;
+}
+
+.ball:first-child{
+    transform: rotate(0deg);
+    animation: one 2.5s linear infinite both;
+}
+
+@keyframes one{
+    0%{
+        transform: rotate(0);
+    }
+
+    25%{
+        transform: rotate(30deg)
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.ball:last-child{
+    transform: rotate(0deg);
+    animation: two 2.5s infinite both;
+}
+
+@keyframes two{
+    0%{
+        transform: rotate(0);
+    }
+
+    25%{
+        transform: rotate(0deg)
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(-30deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.lines{
+    display: block;
+    width: 10px;
+    height: 380px;
+    background-color: #3097af;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+    background:  radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);
+    position: absolute;
+    bottom: 0;
+    
 }
